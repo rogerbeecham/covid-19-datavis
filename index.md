@@ -1,7 +1,3 @@
-Code, data and discussion to support: *‘Glyphmaps’ for analysing the
-scale and temporal spread of Covid-19 reported cases*
-================
-*Roger Beecham*
 
 ## Motivation
 
@@ -234,3 +230,10 @@ pre-peak, Red: post-peak
 </figcaption>
 
 </figure>
+
+-----
+
+  - [Roger Beecham](http://www.roger-beecham.com/), School of Geography,
+    University of Leeds (github:
+    [rogerbeecham](https://github.com/rogerbeecham) | twitter:
+    [rjbeecham](https://twitter.com/rjbeecham))

@@ -1,4 +1,7 @@
-
+---
+output:
+   github_document
+---
 ## Motivation
 
 The release of area-level Covid-19 cases and deaths data raises a familiar challenge for spatial analysis: how to compare change-over-time of cases aggregated to area-level, whilst retaining the spatial context associated with those areas?
