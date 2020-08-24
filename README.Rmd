@@ -7,5 +7,9 @@ output:
 
 Included here is code, data and discussion to support our paper:  _'Glyphmaps' for analysing the scale and temporal spread of Covid-19 reported cases_".
 
-Probably best to access from this web-page: https://wwww.roger-beecham/covid-19-datavis.
+Probably best to access from this web-page: http://www.roger-beecham.com/covid-19-datavis/.
 
+---
+
+* [Roger Beecham](http://www.roger-beecham.com/), School of Geography, University of Leeds (github:
+[rogerbeecham](https://github.com/rogerbeecham) | twitter: [rjbeecham](https://twitter.com/rjbeecham))

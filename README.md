@@ -8,4 +8,11 @@ Included here is code, data and discussion to support our paper:
 reported cases*".
 
 Probably best to access from this web-page:
-<https://wwww.roger-beecham/covid-19-datavis>.
+<http://www.roger-beecham.com/covid-19-datavis/>.
+
+-----
+
+  - [Roger Beecham](http://www.roger-beecham.com/), School of Geography,
+    University of Leeds (github:
+    [rogerbeecham](https://github.com/rogerbeecham) | twitter:
+    [rjbeecham](https://twitter.com/rjbeecham))
