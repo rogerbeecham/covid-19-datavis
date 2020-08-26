@@ -42,8 +42,8 @@ Code :
 <figure>
   <a href="./docs/img/london_example.gif">
   <img src="./docs/img/london_example.gif" width="60%">
+    </a>
   <figcaption>Fig 1. Example charts applied to daily cases data in the London region. Left - ridge contour; right - line chart. Click for full screen version. </figcaption>
-  </a>
 </figure>
 
 <br/>

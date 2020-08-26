@@ -18,13 +18,13 @@ proposed in
 *glyphmaps*, can be used to characterise exponential growth in cases by
 French departments by locating line charts displaying cumulative cases
 at the geometric centroid of each department. This approach was
-subsequenlty replicated [in other
+replicated [in other
 regions](https://twitter.com/skopmichal/status/1250620315081768960?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1250620521059934209%7Ctwgr%5E&ref_url=https%3A%2F%2Fdatagistips.hypotheses.org%2F514).
 Particularly impressive is this [county-level
 glyphmap](https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true)
 in The Washington Post. Lines representing over 3,000 US counties are
-shown concurrently. Many careful design decisions are made in order to
-emphasise certain aspects and de-emphasise others – varying line
+shown concurrently, with many any careful design decisions made in order
+to emphasise certain aspects and de-emphasise others – varying line
 thickness by relative exposure and line colour by growth rate.
 
 In this work we continue the *glyphmap* approach to representing the
@@ -64,8 +64,10 @@ recorded for 150 Upper Tier Local Authority areas for England (upper
 tier authorities comprise county council and unitary authority areas).
 We wish to characterise spread in the first wave of the virus and
 therefore make the decision to analyse case data reported up to 1st June
-2020. All data graphics were programmed high-level declaratively using
-the `ggplot2` package in R.
+2020.
+
+All data graphics were programmed high-level declaratively using the
+`ggplot2` package in R.
 
 Datasets :
 
@@ -87,12 +89,13 @@ Code :
 
 <figure>
 
-<img src="./docs/img/london_example.gif" width="60%">
+<a href="./docs/img/london_example.gif">
+<img src="./docs/img/london_example.gif" width="60%"> </a>
 
 <figcaption>
 
 Fig 1. Example charts applied to daily cases data in the London region.
-Left - *ridge contour*; right - *line chart*.
+Left - ridge contour; right - line chart. Click for full screen version.
 
 </figcaption>
 
@@ -127,22 +130,23 @@ name them contours.
 
 Whilst these designs encode several of the ARs, an obvious omission is
 AR1 *geography*. It is technically possible to arrange the ridges and
-lines at local authority centroids as in the Mathieu Rajerison’s
-*glyphmaps* of French departments. This has the obvious benefit of being
-highly recognisable, enabling authorities to be easily located and
-perhaps regional grouping and comparisons to be more accurately and
-quickly performed. Cluttering and occlusion in more densely populated
-parts of the country and particularly London is inevitable though – and
-clearly problematic.
+lines at local authority centroids as in Mathieu Rajerison’s *glyphmaps*
+of French departments. This has the obvious benefit of being highly
+recognisable, enabling authorities to be easily located and perhaps
+regional grouping and comparisons to be more accurately and quickly
+performed. Cluttering and occlusion in more densely populated parts of
+the country and particularly London is inevitable though – and clearly
+problematic.
 
 <figure>
 
-<img src="./docs/img/exact_examples.png" width="100%">
+<a href="./docs/img/exact_examples.png">
+<img src="./docs/img/exact_examples.png" width="100%"> </a>
 
 <figcaption>
 
-Fig 2. *Ridge contour* and *line* glyphmaps with an exact geospatial
-arrangement.
+Fig 2. Ridge contour and line glyphmaps with an exact geospatial
+arrangement. Click for full screen version.
 
 </figcaption>
 
@@ -162,11 +166,13 @@ cumulative cases and new daily reported cases.
 
 <figure>
 
-<img src="./docs/img/geospatial_example.gif" width="100%">
+<a href="./docs/img/geospatial_example.gif">
+<img src="./docs/img/geospatial_example.gif" width="100%"> </a>
 
 <figcaption>
 
-Fig 3. *Ridge contour* and *line* glyphmaps with SMWG layout.
+Fig 3. Ridge contour and line glyphmaps with SMWG layout. Click for full
+screen version.
 
 </figcaption>
 
@@ -182,11 +188,16 @@ ARs:
 
 <p float="center">
 
-<img src="./docs/img/thickness_web.png" style="width:19.5%">
-<img src="./docs/img/value_web.png" style="width:19.5%">
-<img src="./docs/img/hue_web.png" style="width:19.5%">
-<img src="./docs/img/hue_value_web.png" style="width:19.5%">
-<img src="./docs/img/super_web.png" style="width:19.5%">
+<img src="./docs/img/thickness_web.png" style="width:30%">
+<img src="./docs/img/value_web.png" style="width:30%">
+<img src="./docs/img/hue_web.png" style="width:30%">
+
+</p>
+
+<p float="center">
+
+<img src="./docs/img/hue_value_web.png" style="width:30%">
+<img src="./docs/img/super_web.png" style="width:30%">
 
 </p>
 
@@ -204,15 +215,17 @@ In the full paper, we informally evaluate these proposed re-designs via
 a data analysis and make suggestions for relating re-designs to
 particular data analysis needs. We do not replicate this discussion
 here, but instead generate animations to support the static figures used
-in this discussion.
+in this section of the paper.
 
 <figure>
 
-<img src="./docs/img/anim_thickness_web.gif" width="100%">
+<a href="./docs/img/anim_thickness_web.gif">
+<img src="./docs/img/anim_thickness_web.gif" width="100%"> </a>
 
 <figcaption>
 
-Fig 6. *Ridge contour* and *line* glyphmaps with SMWG layout.
+Fig 6. Ridge contour and line glyphmaps with SMWG layout. Click for full
+screen version.
 
 </figcaption>
 
@@ -220,12 +233,13 @@ Fig 6. *Ridge contour* and *line* glyphmaps with SMWG layout.
 
 <figure>
 
-<img src="./docs/img/anim_thickness_web_peaked.gif" width="100%">
+<a href="./docs/img/anim_thickness_web_peaked.gif">
+<img src="./docs/img/anim_thickness_web_peaked.gif" width="100%"> </a>
 
 <figcaption>
 
-Fig 7. *Ridge contour* and *line* glyphmaps with SMWG layout. Blue:
-pre-peak, Red: post-peak
+Fig 7. Ridge contour and line glyphmaps with SMWG layout. Blue:
+pre-peak, Red: post-peak. Click for full screen version.
 
 </figcaption>
 
