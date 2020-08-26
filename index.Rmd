@@ -6,7 +6,7 @@ output:
 
 The release of area-level Covid-19 cases and deaths data raises a familiar challenge for spatial analysis: how to compare change-over-time of cases aggregated to area-level, whilst retaining the spatial context associated with those areas?
 
-Animated choropleth maps have been deployed [with great effect](https://twitter.com/VictimOfMaths/status/1257428286566776833) to communicate a sense of the pace of change and spread of cases across geographic areas. Animation nevertheless relies on visual memory and it may also be desirable to encode several properties associated with case numbers simultaneously. Mathieu Rajerison demonstrated how [_geosparklines_](https://datagistips.hypotheses.org/514), or as proposed in [Wickham 2012](https://onlinelibrary.wiley.com/doi/abs/10.1002/env.2152), _glyphmaps_, can be used to characterise  exponential growth in cases by French departments by locating line charts displaying cumulative cases at the geometric centroid of each department. This approach was subsequenlty replicated [in other regions](https://twitter.com/skopmichal/status/1250620315081768960?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1250620521059934209%7Ctwgr%5E&ref_url=https%3A%2F%2Fdatagistips.hypotheses.org%2F514). Particularly impressive is this [county-level glyphmap](https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true) in The Washington Post.  Lines representing over 3,000 US counties are shown concurrently. Many careful design decisions are made in order to emphasise certain aspects and de-emphasise others -- varying line thickness by relative exposure and line colour by growth rate.
+Animated choropleth maps have been deployed [with great effect](https://twitter.com/VictimOfMaths/status/1257428286566776833) to communicate a sense of the pace of change and spread of cases across geographic areas. Animation nevertheless relies on visual memory and it may also be desirable to encode several properties associated with case numbers simultaneously. Mathieu Rajerison demonstrated how [_geosparklines_](https://datagistips.hypotheses.org/514), or as proposed in [Wickham 2012](https://onlinelibrary.wiley.com/doi/abs/10.1002/env.2152), _glyphmaps_, can be used to characterise  exponential growth in cases by French departments by locating line charts displaying cumulative cases at the geometric centroid of each department. This approach was replicated [in other regions](https://twitter.com/skopmichal/status/1250620315081768960?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1250620521059934209%7Ctwgr%5E&ref_url=https%3A%2F%2Fdatagistips.hypotheses.org%2F514). Particularly impressive is this [county-level glyphmap](https://www.washingtonpost.com/nation/2020/05/24/coronavirus-rural-america-outbreaks/?arc404=true) in The Washington Post.  Lines representing over 3,000 US counties are shown concurrently, with many any careful design decisions made in order to emphasise certain aspects and de-emphasise others -- varying line thickness by relative exposure and line colour by growth rate.
 
 In this work we continue the _glyphmap_ approach to representing the Covid-19 cases data for local authorities in England and, in a similar way to the Washington Post example, pay particular attention to how glyphs might be parameterised and layered to build data density and reveal important structure. We created several Analysis Requirements (ARs) that our designs should conform to:
 
@@ -22,7 +22,9 @@ This document and repo provides supplementary material to the paper, available a
 
 ## Datasets and implementation
 
-All designs are based on the Covid-19 daily confirmed cases dataset recorded for 150 Upper Tier Local Authority areas for England (upper tier authorities comprise county council and unitary authority areas). We wish to characterise spread in the first wave of the virus and therefore make the decision to analyse case data reported up to 1st June 2020. All data graphics were programmed high-level declaratively using the `ggplot2`  package in R.
+All designs are based on the Covid-19 daily confirmed cases dataset recorded for 150 Upper Tier Local Authority areas for England (upper tier authorities comprise county council and unitary authority areas). We wish to characterise spread in the first wave of the virus and therefore make the decision to analyse case data reported up to 1st June 2020.
+
+All data graphics were programmed high-level declaratively using the `ggplot2`  package in R.
 
 Datasets :
 
@@ -38,8 +40,10 @@ Code :
 ## Charting idioms: lines and ridge contours
 
 <figure>
+  <a href="./docs/img/london_example.gif">
   <img src="./docs/img/london_example.gif" width="60%">
-  <figcaption>Fig 1. Example charts applied to daily cases data in the London region. Left - _ridge contour_; right - _line chart_. </figcaption>
+  <figcaption>Fig 1. Example charts applied to daily cases data in the London region. Left - ridge contour; right - line chart. Click for full screen version. </figcaption>
+  </a>
 </figure>
 
 <br/>
@@ -51,20 +55,24 @@ The line chart requires little explanation. Time in days (AR5) is encoded on the
 
 ## Geo-spatial arrangements
 
-Whilst these designs encode several of the ARs, an obvious omission is AR1 _geography_. It is technically possible to arrange the ridges and lines at local authority centroids as in the Mathieu Rajerison's _glyphmaps_ of French departments. This has the obvious benefit of being highly recognisable, enabling authorities to be easily located and perhaps regional grouping and comparisons to be more accurately and quickly performed. Cluttering and occlusion in more densely populated parts of the country and particularly London is inevitable though -- and clearly problematic.
+Whilst these designs encode several of the ARs, an obvious omission is AR1 _geography_. It is technically possible to arrange the ridges and lines at local authority centroids as in  Mathieu Rajerison's _glyphmaps_ of French departments. This has the obvious benefit of being highly recognisable, enabling authorities to be easily located and perhaps regional grouping and comparisons to be more accurately and quickly performed. Cluttering and occlusion in more densely populated parts of the country and particularly London is inevitable though -- and clearly problematic.
 
 
 <figure>
+  <a href="./docs/img/exact_examples.png">
   <img src="./docs/img/exact_examples.png" width="100%">
-  <figcaption>Fig 2. _Ridge contour_ and _line_ glyphmaps with an exact geospatial arrangement. </figcaption>
+  </a>
+  <figcaption>Fig 2. Ridge contour and line glyphmaps with an exact geospatial arrangement. Click for full screen version. </figcaption>
 </figure>
 
 
 Alternatively a semi-spatial ordering could be used with local authorities of regular size and geometry (grid squares) but with an approximate spatial arrangement. Here we use the layout algorithm proposed and evaluated by [Meulemans et al. 2017](https://www.gicentre.net/small-multiples-with-gaps) -- a geo-spatial _small multiple with gaps_ (smwg). Whilst the smwg layout is less recognisable, it substantially reduces visual clutter, with important additional benefits conferred from the use of regularly-sized grids. The grids allow more visually complex and detailed re-designs -- for example superimposing two separate lines to encode directly cumulative cases and new daily reported cases.
 
 <figure>
+  <a href="./docs/img/geospatial_example.gif">
   <img src="./docs/img/geospatial_example.gif" width="100%">
-  <figcaption>Fig 3. _Ridge contour_ and _line_ glyphmaps with  SMWG layout. </figcaption>
+ </a>
+  <figcaption>Fig 3. Ridge contour and line glyphmaps with  SMWG layout. Click for full screen version. </figcaption>
 </figure>
 
 ## Increasing data density
@@ -73,11 +81,13 @@ Following The Washington Post's example, we explore whether the _lines_ and _rid
 
 <figure>
 <p float="center">
-  <img src="./docs/img/thickness_web.png" style="width:19.5%">
-  <img src="./docs/img/value_web.png" style="width:19.5%">
-  <img src="./docs/img/hue_web.png" style="width:19.5%">
-  <img src="./docs/img/hue_value_web.png" style="width:19.5%">
-  <img src="./docs/img/super_web.png" style="width:19.5%">
+  <img src="./docs/img/thickness_web.png" style="width:30%">
+  <img src="./docs/img/value_web.png" style="width:30%">
+  <img src="./docs/img/hue_web.png" style="width:30%">
+</p>
+<p float="center">
+<img src="./docs/img/hue_value_web.png" style="width:30%">
+<img src="./docs/img/super_web.png" style="width:30%">
 </p>
   <figcaption>Fig 4. Re-designs as we build greater data density. </figcaption>
 </figure>
@@ -85,18 +95,23 @@ Following The Washington Post's example, we explore whether the _lines_ and _rid
 
 ## Evaluating re-designs
 
-In the full paper, we informally evaluate these proposed re-designs via a data analysis and make suggestions for relating re-designs to particular data analysis needs. We do not replicate this discussion here, but instead generate animations to support the static figures used in this discussion.
+In the full paper, we informally evaluate these proposed re-designs via a data analysis and make suggestions for relating re-designs to particular data analysis needs. We do not replicate this discussion here, but instead generate animations to support the static figures used in this section of the paper.
 
 
 <figure>
-  <img src="./docs/img/anim_thickness_web.gif" width="100%">
-  <figcaption>Fig 6. _Ridge contour_ and _line_ glyphmaps with  SMWG layout. </figcaption>
+  <a href="./docs/img/anim_thickness_web.gif">
+    <img src="./docs/img/anim_thickness_web.gif" width="100%">
+  </a>
+  <figcaption>Fig 6. Ridge contour and line glyphmaps with  SMWG layout. Click for full screen version. </figcaption>
 </figure>
 
 <figure>
-  <img src="./docs/img/anim_thickness_web_peaked.gif" width="100%">
-  <figcaption>Fig 7. _Ridge contour_ and _line_ glyphmaps with  SMWG layout. Blue: pre-peak, Red: post-peak </figcaption>
+  <a href="./docs/img/anim_thickness_web_peaked.gif">
+    <img src="./docs/img/anim_thickness_web_peaked.gif" width="100%">
+  </a>
+  <figcaption>Fig 7. Ridge contour and line glyphmaps with  SMWG layout. Blue: pre-peak, Red: post-peak. Click for full screen version.  </figcaption>
 </figure>
+
 
 ---
 
