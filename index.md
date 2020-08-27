@@ -245,6 +245,22 @@ pre-peak, Red: post-peak. Click for full screen version.
 
 </figure>
 
+<figure>
+
+<a href="./docs/img/anim_thickness_web_peaked_fill.gif">
+<img src="./docs/img/anim_thickness_web_peaked_fill.gif" width="100%">
+</a>
+
+<figcaption>
+
+Fig 8. Ridge contours with SMWG layout. Blue: pre-peak, Red: post-peak.
+Lightness varies according to distance from local peak. Click for full
+screen version.
+
+</figcaption>
+
+</figure>
+
 -----
 
   - [Roger Beecham](http://www.roger-beecham.com/), School of Geography,
