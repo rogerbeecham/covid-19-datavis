@@ -31,31 +31,46 @@ In this work we continue the *glyphmap* approach to representing the
 Covid-19 cases data for local authorities in England and, in a similar
 way to the Washington Post example, pay particular attention to how
 glyphs might be parameterised and layered to build data density and
-reveal important structure. We created several Analysis Requirements
-(ARs) that our designs should conform to:
+reveal important structure. We created several *Data Requirements*
+(DatRs) that our designs should incorporate:
 
-  - \[AR1\] **Geography** : case numbers by area displayed with a
-    geo-spatial arrangement.
-  - \[AR2\] **Absolute number** : of cases by area.
-  - \[AR3\] **Relative number** : of cases by area, for example
+  - \[DatR1\] **Geography** : casenumbers by area displayed in an
+    arrangement that reflects their spatial relationships..
+  - \[DatR2\] **Absolute number** : of cases by area (total and/pr
+    cumulative case counts).
+  - \[DatR3\] **Relative number** : of cases by area, for example
     expressing case numbers as a share of population size.
-  - \[AR4\] **Rate of change** : the extent to which growth in cases by
-    area is speeding-up or slowing-down.
-  - \[AR5\] **Time elapsed** : against an absolute or relative start
+  - \[DatR4\] **Rate of change** : the extent to which growth in cases
+    by area is speeding-up or slowing-down.
+  - \[DatR5\] **Time elapsed** : against an absolute or relative start
     point in time.
-  - \[AR6\] **Case history** : cases numbers by areas either
+  - \[DatR6\] **Case history** : cases numbers by areas either
     continuously (daily case releases) or at specific *milestones* in
     the disease trajectory.
-  - \[AR7\] **Cases relative to local ‘peak’** : whether the daily
+  - \[DatR7\] **Cases relative to local ‘peak’** : whether the daily
     growth in case numbers at a time point by area has reached its
     fastest recorded growth rate.
 
-This document and repo provides supplementary material to the paper,
-available as a [pre-print](). In addition to providing code for
-downloading and processing data and replicating the re-designs, this
-document provides animated equivalents of several of the Figures
-included in the paper. Analysis, evaluation and fuller discussion of the
-designs and visualization work is in the paper.
+Additional to these are three key *Design Requirements* (DesRs) to which
+our designs should adhere if they are to be successful in supporting
+detailed spatiotemporal analysis:
+
+  - \[DesR1\] **Concurrent** – all data items must be shown
+    simultaneously to support comparison, exploration and other synoptic
+    tasks.
+  - \[DatR2\] **Discernible** – all marks must be discernible (with
+    limited or manageable occlusion).
+  - \[DesR3\] **Prioritised** – phenomena and patterns that are
+    important must be visually salient.
+  - \[DesR4\] **Estimable** – graphical techniques used to encode
+    quantities must allow estimation.
+
+This document and repo provides supplementary material to [the paper](),
+currently under review. In addition to providing code for downloading
+and processing data and replicating the re-designs, this document
+provides animated equivalents of several of the Figures included in the
+paper. Analysis, evaluation and fuller discussion of the designs and
+visualization work is in the paper.
 
 ## Datasets and implementation
 
@@ -83,7 +98,7 @@ Code :
   - Helper functions for generating *ridge* and *line* charts in
     [`./code/helper_functions.R`](./code/helper_functions.R)
   - Example code for generating and parametrising full *glyphmaps* in
-    [`./code/examples`](./code/examples)
+    [`./code/examples.R`](./code/examples.R)
 
 ## Charting idioms: lines and ridge contours
 
@@ -106,37 +121,37 @@ Left - ridge contour; right - line chart. Click for full screen version.
 We experiment with two chart idioms for designing to the seven ARs:
 *line* and *ridge contour* charts.
 
-The line chart requires little explanation. Time in days (AR5) is
+The line chart requires little explanation. **Time in days** (DatR5) is
 encoded on the horizontal axis – in this case starting from when the
-first 100 cases was recorded for that geographic order. Cumulative
-counts (AR2) of daily new is encoded along the vertical access. The
-chart can be static and display the full case history (AR6) or designed
-to animate over the cases data. The *ridge contour* chart attempts to
-encode loosely the same data properties as the lines. Time varies along
-the horizontal axis and cumulative cases along the vertical. Rather than
-a single line connecting points in temporal order, though, a separate
-line is drawn for each frame (release of cases data), similar to the
-‘lockdown’ annotation in the line chart, but connecting positions on
-the horizontal and vertical axes to contrive a triangle or ridge shape.
-Case history is therefore encoded more indirectly, via animating over
-the ‘current’ frame, which is made bold and also through the case
-‘milestones’ that persist through the animation. The case ‘milestones’
-appear at regular intervals – every 5,000 cases in this case. Milestones
-located close together imply a fast rate of change (AR5) and milestones
-further apart imply a slow rate of change; it is for this reason that we
-name them contours.
+first 100 cases was recorded for that geographic order. **Cumulative
+counts** (DatR2) of daily new is encoded along the vertical access. The
+chart can be static and display the full **case history** (DatR6) or
+designed to animate over the cases data. The *ridge contour* chart
+attempts to encode loosely the same data properties as the lines. Time
+varies along the horizontal axis and cumulative cases along the
+vertical. Rather than a single line connecting points in temporal order,
+though, a separate line is drawn for each frame (release of cases data),
+similar to the ‘lockdown’ annotation in the line chart, but connecting
+positions on the horizontal and vertical axes to contrive a triangle or
+ridge shape. Case history is therefore encoded more indirectly, via
+animating over the ‘current’ frame, which is made bold and also through
+the case ‘milestones’ that persist through the animation. The case
+‘milestones’ appear at regular intervals – every 5,000 cases in this
+case. Milestones located close together imply a fast **rate of change**
+(DatR5) and milestones further apart imply a slow rate of change; it is
+for this reason that we name them contours.
 
 ## Geo-spatial arrangements
 
-Whilst these designs encode several of the ARs, an obvious omission is
-AR1 *geography*. It is technically possible to arrange the ridges and
-lines at local authority centroids as in Mathieu Rajerison’s *glyphmaps*
-of French departments. This has the obvious benefit of being highly
-recognisable, enabling authorities to be easily located and perhaps
-regional grouping and comparisons to be more accurately and quickly
-performed. Cluttering and occlusion in more densely populated parts of
-the country and particularly London is inevitable though – and clearly
-problematic.
+Whilst these designs encode several of the DatRs, an obvious omission is
+DatR1 **geography**. It is technically possible to arrange the ridges
+and lines at local authority centroids as in Mathieu Rajerison’s
+*glyphmaps* of French departments. This has the obvious benefit of being
+highly recognisable, enabling authorities to be easily located and
+perhaps regional grouping and comparisons to be more accurately and
+quickly performed. Cluttering and occlusion in more densely populated
+parts of the country and particularly London is inevitable though – and
+clearly problematic, violating DesR2 **discernable**.
 
 <figure>
 
@@ -182,7 +197,7 @@ screen version.
 
 Following The Washington Post’s example, we explore whether the *lines*
 and *ridges* can be further parameterised in order to meet the remaining
-ARs:
+DatRs:
 
 <figure>
 
@@ -198,6 +213,7 @@ ARs:
 
 <img src="./docs/img/hue_value_web.png" style="width:30%">
 <img src="./docs/img/super_web.png" style="width:30%">
+<img src="./docs/img/super_redesign_web.png" style="width:30%">
 
 </p>
 
@@ -255,6 +271,21 @@ pre-peak, Red: post-peak. Click for full screen version.
 
 Fig 8. Ridge contours with SMWG layout. Blue: pre-peak, Red: post-peak.
 Lightness varies according to distance from local peak. Click for full
+screen version.
+
+</figcaption>
+
+</figure>
+
+<figure>
+
+<a href="./docs/img/anim_super_web.gif">
+<img src="./docs/img/anim_super_web.gif" width="80%"> </a>
+
+<figcaption>
+
+Fig 9. Area chart glyphmap of daily new cases (with 7-day smoothing) and
+spine plot of absolute and relative cases superimposed. Click for full
 screen version.
 
 </figcaption>
