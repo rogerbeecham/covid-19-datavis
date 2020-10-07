@@ -95,6 +95,8 @@ Code :
 
   - Collecting and processing cases and geography datasets in
     [`./code/download_data.R`](./code/download_data.R)
+  - Pre-computing over the cases data for charting in
+    [`./code/data_staging.R`](./code/data_staging.R)
   - Helper functions for generating *ridge* and *line* charts in
     [`./code/helper_functions.R`](./code/helper_functions.R)
   - Example code for generating and parametrising full *glyphmaps* in
