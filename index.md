@@ -65,12 +65,13 @@ detailed spatiotemporal analysis:
   - \[DesR4\] **Estimable** – graphical techniques used to encode
     quantities must allow estimation.
 
-This document and repo provides supplementary material to [the paper](),
-currently under review. In addition to providing code for downloading
-and processing data and replicating the re-designs, this document
-provides animated equivalents of several of the Figures included in the
-paper. Analysis, evaluation and fuller discussion of the designs and
-visualization work is in the paper.
+This document and repo provides supplementary material to our paper,
+currently under review ([pre-print available](https://osf.io/6nz8q/)).
+In addition to providing code for downloading and processing data and
+replicating the re-designs, this document provides animated equivalents
+of several of the Figures included in the paper. Analysis, evaluation
+and fuller discussion of the designs and visualization work is in the
+paper.
 
 ## Datasets and implementation
 
