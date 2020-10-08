@@ -51,7 +51,7 @@ reveal important structure. We created several *Data Requirements*
     growth in case numbers at a time point by area has reached its
     fastest recorded growth rate.
 
-Additional to these are three key *Design Requirements* (DesRs) to which
+Additional to these are four key *Design Requirements* (DesRs) to which
 our designs should adhere if they are to be successful in supporting
 detailed spatiotemporal analysis:
 
@@ -82,8 +82,7 @@ We wish to characterise spread in the first wave of the virus and
 therefore make the decision to analyse case data reported up to 1st June
 2020.
 
-All data graphics were programmed high-level declaratively using the
-`ggplot2` package in R.
+All data graphics were programmed using the `ggplot2` package in R.
 
 Datasets :
 

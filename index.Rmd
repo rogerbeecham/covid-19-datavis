@@ -18,7 +18,7 @@ In this work we continue the _glyphmap_ approach to representing the Covid-19 ca
 * [DatR6] **Case history** : cases numbers by areas either continuously (daily case releases) or at specific _milestones_ in the disease trajectory.
 * [DatR7] **Cases relative to local 'peak'** : whether the daily growth in case numbers at a time point by area has reached its fastest recorded growth rate.
 
-Additional to these are three key _Design Requirements_ (DesRs) to which our designs should adhere if they are to be successful in supporting detailed spatiotemporal analysis:
+Additional to these are four key _Design Requirements_ (DesRs) to which our designs should adhere if they are to be successful in supporting detailed spatiotemporal analysis:
 
 * [DesR1] **Concurrent** -- all data items must be shown simultaneously to support comparison, exploration and other synoptic tasks.
 * [DatR2] **Discernible** -- all marks must be discernible (with limited or manageable occlusion).
@@ -32,7 +32,7 @@ This document and repo provides supplementary material to our paper, currently u
 
 All designs are based on the Covid-19 daily confirmed cases dataset recorded for 150 Upper Tier Local Authority areas for England (upper tier authorities comprise county council and unitary authority areas). We wish to characterise spread in the first wave of the virus and therefore make the decision to analyse case data reported up to 1st June 2020.
 
-All data graphics were programmed high-level declaratively using the `ggplot2`  package in R.
+All data graphics were programmed using the `ggplot2`  package in R.
 
 Datasets :
 
