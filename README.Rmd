@@ -1,11 +1,11 @@
 ---
-title: "Code, data and discussion to support: _'Glyphmaps' for analysing the scale and temporal spread of Covid-19 reported cases_"
+title: "Code, data and discussion to support: _Guidelines and recommendations for mapping Covid-19 prevalence_"
 author: "_Roger Beecham_"
 output:
    github_document
 ---
 
-Included here is code, data and discussion to support our paper:  _'Glyphmaps' for analysing the scale and temporal spread of Covid-19 reported cases_".
+Included here is code, data and discussion to support our paper:  _Guidelines and recommendations for mapping Covid-19 prevalence_".
 
 Probably best to access from this web-page: http://www.roger-beecham.com/covid-19-datavis/.
 
