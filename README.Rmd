@@ -5,7 +5,7 @@ output:
    github_document
 ---
 
-Included here is code, data and discussion to support our paper:  _Guidelines and recommendations for mapping Covid-19 prevalence_".
+Included here is code, data and discussion to support our paper:  [_Guidelines and recommendations for mapping Covid-19 prevalence_](https://osf.io/6nz8q/).
 
 Probably best to access from this web-page: http://www.roger-beecham.com/covid-19-datavis/.
 

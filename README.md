@@ -4,7 +4,8 @@ for mapping Covid-19 prevalence*
 *Roger Beecham*
 
 Included here is code, data and discussion to support our paper:
-*Guidelines and recommendations for mapping Covid-19 prevalence*".
+[*Guidelines and recommendations for mapping Covid-19
+prevalence*](https://osf.io/6nz8q/).
 
 Probably best to access from this web-page:
 <http://www.roger-beecham.com/covid-19-datavis/>.
