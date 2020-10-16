@@ -1,7 +1,9 @@
 Code, data and discussion to support: *Guidelines and recommendations
 for mapping Covid-19 prevalence*
 ================
-*Roger Beecham*
+
+*Roger Beecham* (contact <r.j.beecham@leeds.ac.uk>) <br> *Jason Dykes*
+<br> *Layik Hama* <br> *Nik Lomax*
 
 Included here is code, data and discussion to support our paper:
 [*Guidelines and recommendations for mapping Covid-19
