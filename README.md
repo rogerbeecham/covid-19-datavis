@@ -10,6 +10,10 @@ prevalence*](https://osf.io/6nz8q/).
 Probably best to access from this web-page:
 <http://www.roger-beecham.com/covid-19-datavis/>.
 
+**Also see this [twitter
+thread](https://threadreaderapp.com/thread/1317019462453895168.html)**
+for an analysis and design exposition.
+
 -----
 
   - [Roger Beecham](http://www.roger-beecham.com/), School of Geography,
