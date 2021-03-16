@@ -1,13 +1,11 @@
-Code, data and discussion to support: *Guidelines and recommendations
-for mapping Covid-19 prevalence*
+Code, data and discussion to support: *On the use of ‘glyphmaps’ for analysing the scale and temporal spread of Covid-19 reported cases*
 ================
 
 *Roger Beecham* (contact <r.j.beecham@leeds.ac.uk>) <br> *Jason Dykes*
 <br> *Layik Hama* <br> *Nik Lomax*
 
 Included here is code, data and discussion to support our paper:
-[*Guidelines and recommendations for mapping Covid-19
-prevalence*](https://osf.io/6nz8q/).
+[*On the use of ‘glyphmaps’ for analysing the scale and temporal spread of Covid-19 reported cases*]().
 
 Probably best to access from this web-page:
 <http://www.roger-beecham.com/covid-19-datavis/>.
