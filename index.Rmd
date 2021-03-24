@@ -10,23 +10,23 @@ Animated choropleth maps have been deployed [with great effect](https://twitter.
 
 In this work we continue the _glyphmap_ approach to representing the Covid-19 cases data for local authorities in England and, in a similar way to the Washington Post example, pay particular attention to how glyphs might be parameterised and layered to build data density and reveal important structure. We created several _Data Requirements_ (DatRs) that our designs should incorporate:
 
-* [DatR1] **Geography** : casenumbers by area displayed in an arrangement that reflects their spatial relationships..
-* [DatR2] **Absolute number** : of cases by area (total and/pr cumulative case counts).
-* [DatR3] **Relative number** : of cases by area, for example expressing case numbers as a share of population size.
+* [DatR1] **Geography** : case numbers by area displayed in an arrangement that reflects their spatial relationships.
+* [DatR2] **Absolute number** : of cases by area (total and/or cumulative case counts).
+* [DatR3] **Relative number** : of cases by area, for example expressing total and/or cumula- tive case numbers as a share of population size.
 * [DatR4] **Rate of change** : the extent to which growth in cases by area is speeding-up or slowing-down.
 * [DatR5] **Time elapsed** : against an absolute or relative start point in time.
-* [DatR6] **Case history** : cases numbers by areas either continuously (daily case releases) or at specific _milestones_ in the disease trajectory.
+* [DatR6] **Case history** : case numbers by area either continuously (daily case releases) or at specific milestones in the disease trajectory.
 * [DatR7] **Cases relative to local 'peak'** : whether the daily growth in case numbers at a time point by area has reached its fastest recorded growth rate.
 
 Additional to these are four key _Design Requirements_ (DesRs) to which our designs should adhere if they are to be successful in supporting detailed spatiotemporal analysis:
 
 * [DesR1] **Concurrent** -- all data items must be shown simultaneously to support comparison, exploration and other synoptic tasks.
-* [DatR2] **Discernible** -- all marks must be discernible (with limited or manageable occlusion).
+* [DatR2] **Discernible** -- all marks must be discernible, with limited or manageable occlusion.
 * [DesR3] **Prioritised** -- phenomena and patterns that are important must be visually salient.
 * [DesR4] **Estimable** -- graphical techniques used to encode quantities must allow estimation.
 
 
-This document and repo provides supplementary material to our paper, currently under review ([pre-print available](https://osf.io/6nz8q/)). In addition to providing code for downloading and processing data and replicating the re-designs, this document provides animated equivalents of several of the Figures included in the paper.  Analysis, evaluation and fuller discussion of the designs and visualization work is in the paper.
+This document and repo provides supplementary material to our paper -- [pre-print available](https://osf.io/6nz8q/). In addition to providing code for downloading and processing data and replicating the re-designs, this document provides animated equivalents of several of the Figures included in the paper.  Analysis, evaluation and proper discussion of the designs and visualization work is in the paper.
 
 ## Datasets and implementation
 

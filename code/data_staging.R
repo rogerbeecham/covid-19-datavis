@@ -1,6 +1,6 @@
-
 # -------------------------------------------
-# D A T A   S T A G I N G
+# R script for staging Covid-19 cases data for England 
+# Author: Roger Beecham
 # -------------------------------------------
 
 # -------------------------------------------
