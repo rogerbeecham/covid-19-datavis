@@ -214,7 +214,7 @@ legend <- county_data %>%
       county == "Dubois" ~ "7x more cases than on May 3",
       county == "Androscoggin" ~ "4x",
       county == "Fairfax" ~ "2x",
-      county == "Bledsoe" ~ "Aboout the same as on May 3"
+      county == "Bledsoe" ~ "About the same as on May 3"
     )
   )
 legend_thickness <- county_data %>% 
