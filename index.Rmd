@@ -26,7 +26,7 @@ Additional to these are four key _Design Requirements_ (DesRs) to which our desi
 * [DesR4] **Estimable** -- graphical techniques used to encode quantities must allow estimation.
 
 
-This document and repo provides supplementary material to our paper -- [pre-print available](https://osf.io/6nz8q/). In addition to providing code for downloading and processing data and replicating the re-designs, this document provides animated equivalents of several of the Figures included in the paper.  Analysis, evaluation and proper discussion of the designs and visualization work is in the paper.
+This document and repo provides supplementary material to our paper -- [open access](https://doi.org/10.3390/ijgi10040213). In addition to providing code for downloading and processing data and replicating the re-designs, this document provides animated equivalents of several of the Figures included in the paper.  Analysis, evaluation and proper discussion of the designs and visualization work is in the paper.
 
 ## Datasets and implementation
 

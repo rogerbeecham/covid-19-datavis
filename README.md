@@ -7,7 +7,7 @@ analysing the scale and temporal spread of Covid-19 reported cases*
 
 Included here is code, data and discussion to support our paper: [*On
 the use of ‘glyphmaps’ for analysing the scale and temporal spread of
-Covid-19 reported cases*](https://osf.io/6nz8q/).
+Covid-19 reported cases*](https://doi.org/10.3390/ijgi10040213).
 
 In this repo is **code** for :
 
